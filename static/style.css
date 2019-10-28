@@ -1,0 +1,101 @@
+/* 
+Fonts
+----------------------------------------
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Josefin Slab', serif;
+font-family: 'Lora', serif;
+*/
+
+:root {
+    --main-font: 'Josefin Sans', sans-serif;
+    --sub-font: 'Josefin Slab', serif;
+}
+
+body,
+html {
+    font-family: var(--main-font);
+    font-size: 16px;
+    margin: 0;
+    height: 100%;
+    color: #123456;
+}
+
+.WIP {
+    position: absolute;
+    top: 0px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background: #123456;
+    color: white;
+    font-family: 'Josefin Slab', serif;
+    width: 100%;
+    text-align: center;
+}
+
+.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Scroll down */
+.scroll-down {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75rem;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+/* Main wrapper for the page */
+.wrapper {
+    max-width: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* Header section */
+.header {
+    position: relative;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .header-text {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 12px;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.header h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+.header h2 {
+    margin-top: 0.3rem;
+    margin-left: 0.55rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.header-hello {
+    font-weight: 400;
+}
+
+.header-name {
+    font-weight: 400;
+}
