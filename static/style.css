@@ -9,6 +9,8 @@ font-family: 'Lora', serif;
 :root {
     --main-font: 'Josefin Sans', sans-serif;
     --sub-font: 'Josefin Slab', serif;
+    --main-color: #123456;
+    --sub-color: #f76c6c;
 }
 
 body,
@@ -17,7 +19,7 @@ html {
     font-size: 16px;
     margin: 0;
     height: 100%;
-    color: #123456;
+    color: var(--main-color);
 }
 
 .WIP {
@@ -26,8 +28,8 @@ html {
     height: 50px;
     line-height: 50px;
     font-size: 1.5rem;
-    font-weight: 400;
-    background: #123456;
+    font-weight: 300;
+    background: var(--main-color);
     color: white;
     font-family: 'Josefin Slab', serif;
     width: 100%;
@@ -41,7 +43,6 @@ html {
     margin-left: 0;
 }
 
-/* Scroll down */
 .scroll-down {
     position: absolute;
     bottom: 12px;
@@ -54,27 +55,27 @@ html {
     letter-spacing: 0.1rem;
 }
 
-/* Main wrapper for the page */
 .wrapper {
+    width: 80%;
     max-width: 80%;
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
-    height: 100%;
 }
 
 /* Header section */
 .header {
     position: relative;
-    text-align: left;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
+    background: transparent;
 }
 
 .header .header-text {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 12px;
     border-radius: 12px;
     width: fit-content;
@@ -92,10 +93,12 @@ html {
     font-weight: 300;
 }
 
-.header-hello {
-    font-weight: 400;
+.em-color {
+    color: var(--sub-color);
+    font-weight: 500;
 }
 
+.header-hello,
 .header-name {
     font-weight: 400;
 }
