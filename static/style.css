@@ -4,13 +4,16 @@ Fonts
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Josefin Slab', serif;
 font-family: 'Lora', serif;
+font-family: 'Zilla Slab', serif;
 */
 
 :root {
     --main-font: 'Josefin Sans', sans-serif;
     --sub-font: 'Josefin Slab', serif;
+    --sub-lora-font: 'Lora', serif;
+    --sub-zilla-font: 'Zilla Slab', serif;
     --main-color: #123456;
-    --sub-color: #f76c6c;
+    --sub-color: #00c07f;
 }
 
 body,
@@ -18,87 +21,252 @@ html {
     font-family: var(--main-font);
     font-size: 16px;
     margin: 0;
+    box-sizing: border-box;
     height: 100%;
+    background-image: url(../static/images/ripples.png);
+    background-size: 10%;
     color: var(--main-color);
 }
 
-.WIP {
-    position: absolute;
-    top: 0px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.5rem;
+h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin: 0;
+    user-select: none;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2rem;
     font-weight: 300;
-    background: var(--main-color);
-    color: white;
-    font-family: 'Josefin Slab', serif;
-    width: 100%;
-    text-align: center;
+    user-select: none;
 }
 
-.no-margin {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 12px;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 0.75rem;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 0.1rem;
-}
-
-.wrapper {
-    width: 80%;
-    max-width: 80%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 auto;
-}
-
-/* Header section */
-.header {
-    position: relative;
-    height: 100%;
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
-    background: transparent;
+    text-align: center;
+    height: 100%;
 }
 
-.header .header-text {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 12px;
-    border-radius: 12px;
-    width: max-content;
+.flex {
+    margin: 0 auto;
 }
 
-.header h1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-}
 
-.header h2 {
-    margin-top: 0.3rem;
-    margin-left: 0.55rem;
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-.em-color {
+.co-sub {
     color: var(--sub-color);
     font-weight: 500;
 }
 
-.header-hello,
-.header-name {
+.name {
+    font-family: var(--main-font);
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.update {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    font-size: 1.1rem;
+    background: rgb(18,52,86);
+background: linear-gradient(90deg, rgba(18,52,86,1) 0%, rgba(9,119,106,1) 32%, rgba(0,192,127,1) 100%);
+}
+
+.buttons {
+    width: 45rem;
+    margin: 0 auto;
+    margin-top: 1.55rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.buttons > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 22rem;
+    height: 2.5rem;
+    background: var(--sub-color);
+    font-family: var(--sub-zilla-font);
+    font-weight: 500;
+    color: white;
+    font-size: 1.25rem;
+    border: 2px solid var(--sub-color);
+    box-sizing: border-box;
+    transition: linear 0.15s;
+}
+
+.buttons > a:hover {
+    background: transparent;
+    color: var(--sub-color);
+}
+
+.buttons > a {
+    margin: 0.25rem;
+    user-select: none;
+
+}
+
+.buttons > a > i {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    font-size: 1.4rem;
+}
+
+.buttons > a.btn-blue {
+    background: #0074e1;
+    border-color: #0074e1;
+}
+
+.buttons > a.btn-blue:hover {
+    background: transparent;
+    color: #0074e1;   
+}
+
+.contact {
+    margin-top: 1.75rem;
     font-weight: 400;
 }
+
+.contact > a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: ease-in-out 0.15s;
+}
+
+.contact > a:hover {
+    color: var(--sub-color);
+}
+
+/* iPhone X and smaller */
+@media only screen and (max-width: 375px) {
+
+    body, html {
+        background-size: 75%;
+    }
+
+    .update {
+        position: absolute;
+        top: 0;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .update {
+        font-size: 1rem;
+    }
+
+    .contact {
+        position: absolute;
+        width: 100%;
+        bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .buttons > a:nth-child(odd) {
+        background: #0074e1;
+        border-color: #0074e1;
+    }
+    
+    .buttons > a:nth-child(odd):hover {
+        background: transparent;
+        color: #0074e1;   
+    }
+
+    .buttons > a:nth-child(even) {
+        background: var(--sub-color);
+        border-color:var(--sub-color);
+    }
+    
+    .buttons > a:nth-child(even):hover {
+        background: transparent;
+        color: var(--sub-color);
+    }
+
+    .buttons {
+        margin-top: 2.5rem;
+        width: 85%;
+    }
+
+    .buttons > a {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .buttons > a > i {
+        margin-left: 0.75rem;
+        margin-right: 1.2rem;
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .update {
+        font-size: 0.85rem;
+    }
+
+    .buttons {
+        width: 85%;
+    }
+
+    .buttons > a {
+        font-size: 1rem;
+    }
+
+    .buttons > a > i {
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+        font-size: 1.25em;
+    }
+
+    .buttons > a:nth-child(odd) {
+        background: #0074e1;
+        border-color: #0074e1;
+    }
+    
+    .buttons > a:nth-child(odd):hover {
+        background: transparent;
+        color: #0074e1;   
+    }
+
+    .buttons > a:nth-child(even) {
+        background: var(--sub-color);
+        border-color:var(--sub-color);
+    }
+    
+    .buttons > a:nth-child(even):hover {
+        background: transparent;
+        color: var(--sub-color);
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .contact {
+        font-size: 0.85rem;
+    }
+ }

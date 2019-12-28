@@ -13,43 +13,37 @@
       href="https://fonts.googleapis.com/css?family=Domine:400,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Titillium+Web:200,300,400,600,700,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
     <link href="./static/style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="./static/images/dna-512x512.png" />
+    <script src="https://kit.fontawesome.com/84bd7f2adb.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="globe"></div>
-    <div class="scroll-down">
-      Scroll Down
+    <div class="update">
+      Sorry - I'm currently updating my website! Please come back soon to view my completed site.
     </div>
-    <div class="header">
-      <div class="wrapper">
-        <div class="header-text">
-          <h1 class="no-margin">
-            <span class="header-hello">Cześć</span>, I'm
-            <span class="header-name">Avery Bryson Buehler</span>.
-          </h1>
-          <h2 class="no-margin">
-            I'm currently focused on pursuing
-            <span class="em-color">neuroscience</span> and
-            <span class="em-color">medicine</span>.
-          </h2>
+    <div class="container">
+      <div class="flex">
+        <h1>Cześć, <span class="fw-300">I'm</span> <span class="name">Avery Bryson Buehler</span>.</h1>
+        <h2 class="h2-1">
+          I'm currently focused on pursuing
+          <span class="co-sub">neuroscience</span> and
+          <span class="co-sub">medicine</span>.
+        </h2>
+
+        <div class="buttons">
+          <a class="btn-blue" href="https://www.linkedin.com/in/averybuehler/" target="_blank" alt="LinkedIn"><i class="fab fa-linkedin-in"></i>Connect with me on LinkedIn</a>
+          <a href="https://github.com/AveryBuehler/" target="_blank" alt="GitHub"><i class="fab fa-github"></i>View my code on GitHub</a>
+          <a href="https://www.linkedin.com/in/averybuehler/" target="_blank" alt="Twitter"><i class="fab fa-twitter"></i>Follow me on Twitter</a>
+          <a class="btn-blue" href="https://open.spotify.com/user/876tzj8uxjn17qhs51izf2ml0?si=hY-UPsEoSsOUz9vkuBNLvw" target="_blank" alt="Spotify"><i class="fab fa-spotify"></i>Listen to my Spotify playlists</a>
         </div>
+
+        <div class="contact">
+          <a href="mailto:averybuehler@gmail.com">averybuehler@gmail.com</a> / <a href="tel:1-860-803-6187">+1 (860) 803-6187</a></div>
       </div>
     </div>
-
-    <div class="WIP">
-      Hi! I'm currently renovating my website. Please check back soon. 😊
-    </div>
-
-    <script src="./static/three.r92.min.js"></script>
-    <script src="./static/vanta.globe.min.js"></script>
-    <script>
-      VANTA.GLOBE({
-        el: "#globe",
-        color: 0xf76c6c,
-        color2: 0x123456,
-        backgroundColor: 0xffffff
-      });
-    </script>
   </body>
 </html>
