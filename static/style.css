@@ -148,7 +148,7 @@ background: linear-gradient(90deg, rgba(18,52,86,1) 0%, rgba(9,119,106,1) 32%, r
 }
 
 /* iPhone X and smaller */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
 
     body, html {
         background-size: 75%;
